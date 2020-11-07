@@ -28,10 +28,6 @@ const account = {
   // История транзакций
   transactions: [],
 
-  // getTransactions() {
-  //   return this.transactions;
-  // },
-
   /*
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
@@ -80,8 +76,10 @@ const account = {
   getTransactionTotal(type) {},
 };
 
-account.createTransaction({ id: 'user', amount: 300, type: 'deposit' });
-account.createTransaction({ id: 'user', amount: 200, type: 'withdraw' });
+// account.createTransaction({ id: 'user', amount: 300, type: 'deposit' });
+// account.createTransaction({ id: 'user', amount: 200, type: 'withdraw' });
+
+account.createTransaction(200, Transaction.DEPOSIT);
 
 console.log(account.createTransaction());
 console.table(account.createTransaction());
